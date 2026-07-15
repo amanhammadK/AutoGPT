@@ -1,0 +1,11 @@
+name: CI
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+jobs:
+  ci:
+    uses: amanhammadK/nxm-ci-templates/.github/workflows/python-ci.yml@main
+    with:
+      python-version: "3.11"
